@@ -84,3 +84,27 @@ footer { text-align: center; margin-top: 80px; color: var(--text-dim); font-size
 }
 .project-meta a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-dim); }
 .project-meta a:hover { color: var(--accent); border-color: var(--accent); }
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.detail-item i {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.detail-item code {
+    background: rgba(255,255,255,0.05);
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--text);
+}

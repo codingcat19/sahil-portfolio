@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil | DevOps Engineer</title>
+    <title>Sahil | Junior DevOps Engineer</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
             <p class="role">Junior DevOps Engineer</p>
             <div class="social-links">
                 <a href="https://github.com/codingcat19" target="_blank"><i data-lucide="github"></i></a>
-                <a href="#" target="_blank"><i data-lucide="linkedin"></i></a>
-                <a href="#" target="_blank"><i data-lucide="mail"></i></a>
+                <a href="linkedin.com/in/sahilshivalkar" target="_blank"><i data-lucide="linkedin"></i></a>
+                <a href="shivalkarsahil1906@gmail.com" target="_blank"><i data-lucide="mail"></i></a>
             </div>
         </header>
 
@@ -30,12 +30,33 @@
             </section>
 
             <section class="card featured">
-                <div class="badge">Featured Project</div>
-                <h3><i data-lucide="package"></i> End-to-End GitOps Pipeline</h3>
-                <p>Implemented a fully automated GitOps workflow using <strong>ArgoCD</strong> to sync Kubernetes manifests from Git to a local <strong>Minikube</strong> cluster.</p>
-                <div class="project-meta">
-                    <span><i data-lucide="external-link"></i> <a href="#">Architecture Diagram</a></span>
-                    <span><i data-lucide="github"></i> <a href="#">Source Code</a></span>
+                <div class="badge">Advanced Project</div>
+                <h3><i data-lucide="box"></i> Kubernetes 3-Tier Todo Stack</h3>
+                <p>
+                    Developed a production-ready Todo application featuring a Node.js API, React Frontend, and MongoDB. 
+                    Deployed using <strong>Helm</strong> on a multi-node <strong>KIND cluster</strong>.
+                </p>
+
+                <div class="project-details">
+                    <div class="detail-item">
+                        <strong><i data-lucide="check-circle-2"></i> Resilience:</strong> 
+                        Configured Liveness/Readiness probes for 100% uptime.
+                    </div>
+                    <div class="detail-item">
+                        <strong><i data-lucide="shield-check"></i> Security:</strong> 
+                        Managed MongoDB credentials using K8s Secrets via <code>valueFrom</code>.
+                    </div>
+                    <div class="detail-item">
+                        <strong><i data-lucide="bar-chart"></i> Optimization:</strong> 
+                         Defined Resource Limits (256MiB RAM) to prevent OOM kills.
+                    </div>
+                </div>
+
+                <div class="tags" style="margin-top: 15px;">
+                    <span>Helm v3</span>
+                    <span>KIND Cluster</span>
+                    <span>NodePort</span>
+                    <span>Resource Quotas</span>
                 </div>
             </section>
 
