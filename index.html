@@ -1,42 +1,85 @@
-<main>
-    <section class="card">
-        <h2><i data-lucide="terminal"></i> About Me</h2>
-        <p>Aspiring DevOps Engineer focusing on GitOps and Cloud Native technologies. Experienced in automating infrastructure and establishing robust observability stacks.</p>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil | DevOps Engineer</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-badge">Available for New Projects</div>
+            <h1>Sahil<span class="accent">.</span></h1>
+            <p class="role">Junior DevOps Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/codingcat19" target="_blank"><i data-lucide="github"></i></a>
+                <a href="#" target="_blank"><i data-lucide="linkedin"></i></a>
+                <a href="#" target="_blank"><i data-lucide="mail"></i></a>
+            </div>
+        </header>
 
-    <section class="grid">
-        <div class="card">
-            <h3><i data-lucide="layers"></i> Core Infrastructure</h3>
-            <div class="tags">
-                <span>Kubernetes</span>
-                <span>Docker</span>
-                <span>Terraform</span>
-            </div>
-        </div>
+        <main>
+            <section class="card">
+                <h2><i data-lucide="terminal"></i> About Me</h2>
+                <p>Passionate DevOps Engineer focused on automating infrastructure and streamlining deployment workflows. I specialize in building resilient systems using GitOps methodologies and maintaining high visibility through modern observability stacks.</p>
+            </section>
 
-        <div class="card">
-            <h3><i data-lucide="git-branch"></i> CI/CD & GitOps</h3>
-            <div class="tags">
-                <span>Jenkins</span>
-                <span>ArgoCD</span>
-                <span>GitHub Actions</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><i data-lucide="bar-chart-3"></i> Observability</h3>
-            <div class="tags">
-                <span>Prometheus</span>
-                <span>Grafana</span>
-            </div>
-        </div>
+            <section class="grid">
+                <div class="card">
+                    <h3><i data-lucide="layers"></i> Infrastructure</h3>
+                    <div class="tags">
+                        <span>Kubernetes</span>
+                        <span>Docker</span>
+                        <span>Terraform</span>
+                    </div>
+                </div>
 
-        <div class="card">
-            <h3><i data-lucide="code-2"></i> Scripting</h3>
-            <div class="tags">
-                <span>Shell Scripting (Bash)</span>
-                <span>Linux Admin</span>
-            </div>
-        </div>
-    </section>
-</main>
+                <div class="card">
+                    <h3><i data-lucide="git-branch"></i> CI/CD & GitOps</h3>
+                    <div class="tags">
+                        <span>Jenkins</span>
+                        <span>ArgoCD</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i data-lucide="bar-chart-3"></i> Observability</h3>
+                    <div class="tags">
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><i data-lucide="code-2"></i> Automation</h3>
+                    <div class="tags">
+                        <span>Shell Scripting</span>
+                        <span>Linux Admin</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h3><i data-lucide="cpu"></i> Current Deployment</h3>
+                <p>This portfolio is a live project: container-ready and automatically deployed via a <strong>GitHub Actions</strong> CI/CD pipeline.</p>
+                <a href="https://github.com/codingcat19/sahil-portfolio" class="project-link" target="_blank">View Repository Source →</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sahil. Pipeline Status: <span class="accent">Stable</span></p>
+        </footer>
+    </div>
+
+    <script>
+      // Initialize icons
+      lucide.createIcons();
+    </script>
+</body>
+</html>
