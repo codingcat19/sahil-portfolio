@@ -54,21 +54,23 @@
                 <div class="tags">
                     <span>Helm v3</span><span>KIND Cluster</span><span>NodePort</span><span>Resource Quotas</span>
                 </div>
+                
+                <a href="https://github.com/codingcat19/three-tier-eks-iac.git" class="project-link" target="_blank" style="display: block; margin-top: 15px;">View Repository Source →</a>
             </section>
 
             <div class="grid">
                 <div class="card project-card">
                     <h3><i data-lucide="container"></i> Multi-Container Flask App</h3>
-                    <p>Orchestrated a 2-tier architecture using <strong>Docker Compose</strong>. Integrated automated healthchecks and service dependencies to ensure high availability.</p>
+                    <p>Orchestrated a 2-tier architecture using <strong>Docker Compose</strong>. Integrated automated healthchecks and service dependencies.</p>
                     <div class="tags mini-tags">
-                        <span>Docker Compose</span><span>Flask</span><span>PostgreSQL</span>
+                        <span>Docker Compose</span><span>Flask</span><span>SQL</span>
                     </div>
                     <a href="https://github.com/codingcat19/DevOps-Project-Two-Tier-Flask-App.git" class="project-link" target="_blank">View Repository →</a>
                 </div>
 
                 <div class="card project-card">
                     <h3><i data-lucide="cloud"></i> AWS IaC with Terraform</h3>
-                    <p>Programmed reusable <strong>Terraform modules</strong> for EC2 deployment, reducing setup time by 90%. Automated server configuration using User Data for Nginx.</p>
+                    <p>Programmed reusable <strong>Terraform modules</strong> for EC2 deployment, reducing setup time by 90% via automated Nginx provisioning.</p>
                     <div class="tags mini-tags">
                         <span>Terraform</span><span>AWS</span><span>Infrastructure as Code</span>
                     </div>
@@ -99,4 +101,38 @@
             <section class="card">
                 <div class="deployment-header">
                     <h3><i data-lucide="cpu"></i> Current Deployment</h3>
-                    <img src="
+                    <img src="https://github.com/codingcat19/sahil-portfolio/actions/workflows/deploy.yml/badge.svg" alt="Build Status" class="pipeline-badge">
+                </div>
+                <p>This portfolio is a live project: container-ready and automatically deployed via a <strong>GitHub Actions</strong> CI/CD pipeline.</p>
+                <a href="https://github.com/codingcat19/sahil-portfolio" class="project-link" target="_blank">View Repository Source →</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sahil. Pipeline Status: <span class="accent">Stable</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const btn = document.getElementById('theme-toggle');
+            const iconName = theme === 'light' ? 'moon' : 'sun';
+            
+            btn.innerHTML = `<i data-lucide="${iconName}"></i>`;
+            lucide.createIcons();
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    </script>
+</body>
+</html>
