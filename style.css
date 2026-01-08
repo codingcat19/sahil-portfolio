@@ -170,3 +170,25 @@ footer { text-align: center; margin-top: 80px; color: var(--text-dim); font-size
     font-weight: 600;
     font-size: 0.9rem;
 }
+
+.deployment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pipeline-badge {
+    height: 20px;
+    border-radius: 4px;
+    /* Subtle glow effect for the badge */
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.2));
+}
+
+/* Ensure images don't break in light mode */
+[data-theme="light"] .pipeline-badge {
+    filter: none;
+    border: 1px solid var(--border);
+}
