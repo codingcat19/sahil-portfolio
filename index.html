@@ -11,16 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+        <i data-lucide="sun" id="theme-icon"></i>
+    </button>
+
     <div class="container">
         <header>
             <div class="profile-badge">Available for New Projects</div>
             <h1>Sahil<span class="accent">.</span></h1>
             <p class="role">Junior DevOps Engineer</p>
+            
             <div class="social-links">
                 <a href="https://github.com/codingcat19" target="_blank"><i data-lucide="github"></i></a>
                 <a href="https://linkedin.com/in/sahilshivalkar" target="_blank"><i data-lucide="linkedin"></i></a>
-                <a href="mailto:shivalkarsahil1906@gmail.com" target="_blank"><i data-lucide="mail"></i></a>
+                <a href="mailto:shivalkarsahil1906@gmail.com"><i data-lucide="mail"></i></a>
             </div>
+
+            <a href="./resume.pdf" class="resume-btn" target="_blank">
+                <i data-lucide="file-text"></i> Download Resume
+            </a>
         </header>
 
         <main>
@@ -109,8 +118,23 @@
     </div>
 
     <script>
-      // Initialize icons
-      lucide.createIcons();
+        // Initialize icons
+        lucide.createIcons();
+
+        // Theme Toggle Logic
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            const isLight = body.getAttribute('data-theme') === 'light';
+            body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+            
+            // Swap icon
+            const iconName = isLight ? 'sun' : 'moon';
+            themeIcon.setAttribute('data-lucide', iconName);
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
