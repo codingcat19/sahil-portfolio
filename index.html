@@ -5,19 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil | DevOps Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <h1>Sahil - Junior DevOps Engineer</h1>
-        <p>Automating the world, one pipeline at a time.</p>
-    </header>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Docker & Kubernetes</li>
-            <li>CI/CD (GitHub Actions)</li>
-            <li>Linux Administration</li>
-        </ul>
-    </section>
+    <div class="container">
+        <header>
+            <div class="profile-badge">Available for Work</div>
+            <h1>Sahil <span class="accent">.</span></h1>
+            <p class="role">Junior DevOps Engineer</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="github"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+                <a href="#"><i data-lucide="mail"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2><i data-lucide="terminal"></i> About Me</h2>
+                <p>Aspiring DevOps Engineer passionate about automation, CI/CD, and cloud infrastructure. Currently focused on building scalable pipelines and containerized environments.</p>
+            </section>
+
+            <section class="grid">
+                <div class="card">
+                    <h3><i data-lucide="layers"></i> Tech Stack</h3>
+                    <div class="tags">
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>GitHub Actions</span>
+                        <span>Linux</span>
+                        <span>Terraform</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i data-lucide="cpu"></i> Current Projects</h3>
+                    <p>Automated portfolio deployment via GitHub Actions.</p>
+                    <a href="#" class="project-link">View Repo →</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Sahil. Built with automated CI/CD.</p>
+        </footer>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
 </body>
 </html>
