@@ -108,4 +108,40 @@
             <section class="card">
                 <div class="deployment-header">
                     <h3><i data-lucide="cpu"></i> Current Deployment</h3>
-                    <img src="
+                    <img src="https://github.com/codingcat19/sahil-portfolio/actions/workflows/deploy.yml/badge.svg" alt="Build Status" class="pipeline-badge">
+                </div>
+                <p>This portfolio is a live project: container-ready and automatically deployed via a <strong>GitHub Actions</strong> CI/CD pipeline.</p>
+                <a href="https://github.com/codingcat19/sahil-portfolio" class="project-link" target="_blank">View Repository Source →</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sahil. Pipeline Status: <span class="accent">Stable</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const btn = document.getElementById('theme-toggle');
+            // If theme is light, show moon (to switch to dark)
+            const iconName = theme === 'light' ? 'moon' : 'sun';
+            
+            btn.innerHTML = `<i data-lucide="${iconName}"></i>`;
+            lucide.createIcons();
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    </script>
+</body>
+</html>
