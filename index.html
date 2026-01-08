@@ -16,10 +16,10 @@
     </button>
 
     <div class="container">
-        <header class="main-header">
+        <header>
             <div class="profile-badge">Open to DevOps Roles</div>
             <h1>Sahil Shivalkar<span class="accent">.</span></h1>
-            <p class="role">Aspiring DevOps Engineer | Electronics & Telecommunication</p>
+            <p class="role">Aspiring DevOps Engineer | Electronics & Telecommunication Engineer</p>
             
             <div class="social-links">
                 <a href="https://github.com/codingcat19" target="_blank"><i data-lucide="github"></i></a>
@@ -33,7 +33,7 @@
         </header>
 
         <main>
-            <section class="card about-section">
+            <section class="card">
                 <h2><i data-lucide="terminal"></i> Profile Summary</h2>
                 <p>Aspiring DevOps Engineer with a background in Electronics & Telecommunication and hands-on experience in building GitOps-driven CI/CD pipelines. Proficient in automating cloud infrastructure via Terraform and managing containerized microservices with Docker and Kubernetes to ensure high availability.</p>
             </section>
@@ -42,17 +42,95 @@
             
             <section class="card featured">
                 <div class="badge">Most Technical</div>
-                <h3><i data-lucide="box"></i> End-to-End GitOps Pipeline for Microservices</h3>
-                <p>Engineered a fully automated GitOps CD pipeline using ArgoCD for a resilient 3-tier microservices architecture.</p>
+                <h3><i data-lucide="box"></i> End-to-End GitOps Pipeline for 3-Tier Microservices</h3>
+                <p>Engineered a fully automated GitOps CD pipeline using ArgoCD for a resilient microservices architecture.</p>
 
                 <div class="project-details">
-                    <div class="detail-item"><i data-lucide="check-circle-2"></i> <strong>Availability:</strong> Liveness/Readiness probes for 100% uptime.</div>
-                    <div class="detail-item"><i data-lucide="database"></i> <strong>Persistence:</strong> StatefulSets with PVCs for MongoDB integrity.</div>
-                    <div class="detail-item"><i data-lucide="activity"></i> <strong>Monitoring:</strong> Prometheus & Grafana for real-time metrics.</div>
+                    <div class="detail-item"><i data-lucide="check-circle-2"></i> <strong>Availability:</strong> Implemented Liveness/Readiness probes for 100% uptime.</div>
+                    <div class="detail-item"><i data-lucide="database"></i> <strong>Persistence:</strong> Configured StatefulSets with PVCs for MongoDB data integrity.</div>
+                    <div class="detail-item"><i data-lucide="activity"></i> <strong>Monitoring:</strong> Integrated Prometheus & Grafana for real-time system metrics.</div>
                 </div>
 
                 <div class="tags">
-                    <span>ArgoCD</span><span>Kubernetes</span><span>Prometheus</span><span>GitOps</span>
+                    <span>ArgoCD</span><span>Kubernetes</span><span>Prometheus</span><span>MongoDB</span><span>GitOps</span>
                 </div>
                 
-                
+                <a href="https://github.com/codingcat19/three-tier-eks-iac.git" class="project-link" target="_blank">View Repository Source →</a>
+            </section>
+
+            <div class="grid">
+                <div class="card project-card">
+                    <h3><i data-lucide="cloud"></i> AWS Infrastructure (Terraform)</h3>
+                    <p>Automated EC2 deployment with reusable modules and Nginx provisioning via User Data, reducing setup time by 90%.</p>
+                    <div class="tags">
+                        <span>Terraform</span><span>AWS</span><span>IaC</span>
+                    </div>
+                    <a href="https://github.com/codingcat19/terraform-aws-web-stack.git" class="project-link" target="_blank">View Code →</a>
+                </div>
+
+                <div class="card project-card">
+                    <h3><i data-lucide="container"></i> Multi-Container Web App</h3>
+                    <p>Orchestrated a 2-tier architecture using Docker Compose with automated healthchecks and dependency management.</p>
+                    <div class="tags">
+                        <span>Docker</span><span>Docker Compose</span><span>Automation</span>
+                    </div>
+                    <a href="https://github.com/codingcat19/DevOps-Project-Two-Tier-Flask-App.git" class="project-link" target="_blank">View Code →</a>
+                </div>
+            </div>
+
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="grid skills-grid">
+                <div class="card skill-card">
+                    <h3>Infrastructure</h3>
+                    <div class="tags"><span>Kubernetes</span><span>Docker</span><span>Terraform</span></div>
+                </div>
+                <div class="card skill-card">
+                    <h3>CI/CD & GitOps</h3>
+                    <div class="tags"><span>Jenkins</span><span>ArgoCD</span><span>GitHub Actions</span></div>
+                </div>
+                <div class="card skill-card">
+                    <h3>Observability</h3>
+                    <div class="tags"><span>Prometheus</span><span>Grafana</span></div>
+                </div>
+                <div class="card skill-card">
+                    <h3>Scripting</h3>
+                    <div class="tags"><span>Shell Scripting</span><span>Linux</span></div>
+                </div>
+            </div>
+
+            <section class="card">
+                <div class="deployment-header">
+                    <h3><i data-lucide="cpu"></i> Deployment Status</h3>
+                    <img src="https://github.com/codingcat19/sahil-portfolio/actions/workflows/deploy.yml/badge.svg" alt="Build Status" class="pipeline-badge">
+                </div>
+                <p>This portfolio is container-ready and automatically deployed via a <strong>GitHub Actions</strong> CI/CD pipeline.</p>
+                <a href="https://github.com/codingcat19/sahil-portfolio" class="project-link" target="_blank">View Portfolio CI/CD Source →</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sahil Shivalkar | Built with Automation in Mind</p>
+        </footer>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            const btn = document.getElementById('theme-toggle');
+            const iconName = theme === 'light' ? 'moon' : 'sun';
+            btn.innerHTML = `<i data-lucide="${iconName}"></i>`;
+            lucide.createIcons();
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+        lucide.createIcons();
+    </script>
+</body>
+</html>
