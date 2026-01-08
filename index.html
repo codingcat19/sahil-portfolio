@@ -38,110 +38,65 @@
                 <p>I build and manage automated infrastructure with a focus on deployment reliability. My experience includes implementing GitOps workflows to streamline application delivery and configuring observability stacks to ensure system health and performance.</p>
             </section>
 
+            <h2 class="section-title">Projects</h2>
+            
             <section class="card featured">
                 <div class="badge">Featured Project</div>
-                <h3><i data-lucide="box"></i> Kubernetes 3-Tier Todo Stack</h3>
-                <p>
-                    Developed a production-ready Todo application featuring a Node.js API, React Frontend, and MongoDB. 
-                    Deployed using <strong>Helm</strong> on a multi-node <strong>KIND cluster</strong>.
-                </p>
+                <h3><i data-lucide="box"></i> End-to-End GitOps Pipeline for Resilient 3-Tier Microservices</h3>
+                <p>Developed a production-ready Todo application featuring a Node.js API, React Frontend, and MongoDB. Deployed using <strong>Helm</strong> on a multi-node <strong>KIND cluster</strong>.</p>
 
                 <div class="project-details">
-                    <div class="detail-item">
-                        <strong><i data-lucide="check-circle-2"></i> Resilience:</strong> 
-                        Configured Liveness/Readiness probes for 100% uptime.
-                    </div>
-                    <div class="detail-item">
-                        <strong><i data-lucide="shield-check"></i> Security:</strong> 
-                        Managed MongoDB credentials using K8s Secrets via <code>valueFrom</code>.
-                    </div>
-                    <div class="detail-item">
-                        <strong><i data-lucide="bar-chart"></i> Optimization:</strong> 
-                         Defined Resource Limits (256MiB RAM) to prevent OOM kills.
-                    </div>
+                    <div class="detail-item"><strong><i data-lucide="check-circle-2"></i> Resilience:</strong> Configured Liveness/Readiness probes for 100% uptime.</div>
+                    <div class="detail-item"><strong><i data-lucide="shield-check"></i> Security:</strong> Managed MongoDB credentials using K8s Secrets via <code>valueFrom</code>.</div>
+                    <div class="detail-item"><strong><i data-lucide="bar-chart"></i> Optimization:</strong> Defined Resource Limits (256MiB RAM) to prevent OOM kills.</div>
                 </div>
 
-                <div class="tags" style="margin-top: 15px;">
-                    <span>Helm v3</span>
-                    <span>KIND Cluster</span>
-                    <span>NodePort</span>
-                    <span>Resource Quotas</span>
+                <div class="tags">
+                    <span>Helm v3</span><span>KIND Cluster</span><span>NodePort</span><span>Resource Quotas</span>
                 </div>
             </section>
 
-            <section class="grid">
-                <div class="card">
+            <div class="grid">
+                <div class="card project-card">
+                    <h3><i data-lucide="container"></i> Multi-Container Flask App</h3>
+                    <p>Orchestrated a 2-tier architecture using <strong>Docker Compose</strong>. Integrated automated healthchecks and service dependencies to ensure high availability.</p>
+                    <div class="tags mini-tags">
+                        <span>Docker Compose</span><span>Flask</span><span>PostgreSQL</span>
+                    </div>
+                    <a href="https://github.com/codingcat19/DevOps-Project-Two-Tier-Flask-App.git" class="project-link" target="_blank">View Repository →</a>
+                </div>
+
+                <div class="card project-card">
+                    <h3><i data-lucide="cloud"></i> AWS IaC with Terraform</h3>
+                    <p>Programmed reusable <strong>Terraform modules</strong> for EC2 deployment, reducing setup time by 90%. Automated server configuration using User Data for Nginx.</p>
+                    <div class="tags mini-tags">
+                        <span>Terraform</span><span>AWS</span><span>Infrastructure as Code</span>
+                    </div>
+                    <a href="https://github.com/codingcat19/terraform-aws-web-stack.git" class="project-link" target="_blank">View Repository →</a>
+                </div>
+            </div>
+
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid skills-grid">
+                <div class="card skill-card">
                     <h3><i data-lucide="layers"></i> Infrastructure</h3>
-                    <div class="tags">
-                        <span>Kubernetes</span>
-                        <span>Docker</span>
-                        <span>Terraform</span>
-                    </div>
+                    <div class="tags"><span>Kubernetes</span><span>Docker</span><span>Terraform</span></div>
                 </div>
-
-                <div class="card">
+                <div class="card skill-card">
                     <h3><i data-lucide="git-branch"></i> CI/CD & GitOps</h3>
-                    <div class="tags">
-                        <span>Jenkins</span>
-                        <span>ArgoCD</span>
-                        <span>GitHub Actions</span>
-                    </div>
+                    <div class="tags"><span>Jenkins</span><span>ArgoCD</span><span>GitHub Actions</span></div>
                 </div>
-                
-                <div class="card">
+                <div class="card skill-card">
                     <h3><i data-lucide="bar-chart-3"></i> Observability</h3>
-                    <div class="tags">
-                        <span>Prometheus</span>
-                        <span>Grafana</span>
-                    </div>
+                    <div class="tags"><span>Prometheus</span><span>Grafana</span></div>
                 </div>
-
-                <div class="card">
+                <div class="card skill-card">
                     <h3><i data-lucide="code-2"></i> Automation</h3>
-                    <div class="tags">
-                        <span>Shell Scripting</span>
-                        <span>Linux Admin</span>
-                    </div>
+                    <div class="tags"><span>Shell Scripting</span><span>Linux Admin</span></div>
                 </div>
-            </section>
+            </div>
 
             <section class="card">
                 <div class="deployment-header">
                     <h3><i data-lucide="cpu"></i> Current Deployment</h3>
-                    <img src="https://github.com/codingcat19/sahil-portfolio/actions/workflows/deploy.yml/badge.svg" alt="Build Status" class="pipeline-badge">
-                </div>
-                <p>This portfolio is a live project: container-ready and automatically deployed via a <strong>GitHub Actions</strong> CI/CD pipeline.</p>
-                <a href="https://github.com/codingcat19/sahil-portfolio" class="project-link" target="_blank">View Repository Source →</a>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Sahil. Pipeline Status: <span class="accent">Stable</span></p>
-        </footer>
-    </div>
-
-    <script>
-        function setTheme(theme) {
-            document.body.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            
-            const btn = document.getElementById('theme-toggle');
-            // If theme is light, show moon (to switch to dark)
-            const iconName = theme === 'light' ? 'moon' : 'sun';
-            
-            btn.innerHTML = `<i data-lucide="${iconName}"></i>`;
-            lucide.createIcons();
-        }
-
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        setTheme(savedTheme);
-
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            setTheme(newTheme);
-        });
-    </script>
-</body>
-</html>
+                    <img src="
