@@ -127,12 +127,15 @@
         const body = document.body;
 
         toggleBtn.addEventListener('click', () => {
-            const isLight = body.getAttribute('data-theme') === 'light';
-            body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+            const isCurrentlyLight = body.getAttribute('data-theme') === 'light';
+            const nextTheme = isCurrentlyLight ? 'dark' : 'light';
+
+            body.setAttribute('data-theme', nextTheme);
             
-            // Swap icon
-            const iconName = isLight ? 'sun' : 'moon';
-            themeIcon.setAttribute('data-lucide', iconName);
+            const nextIcon = nextTheme === 'light' ? 'moon' : 'sun';
+
+            themeIcon.setAttribute('data-lucide', nextIcon);
+
             lucide.createIcons();
         });
     </script>
